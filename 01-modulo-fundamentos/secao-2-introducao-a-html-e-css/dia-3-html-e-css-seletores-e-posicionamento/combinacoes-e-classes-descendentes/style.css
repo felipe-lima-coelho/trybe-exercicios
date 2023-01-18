@@ -36,3 +36,11 @@ li {
 li em {
   font-weight: bold;
 }
+
+#linguagens li:not(:nth-child(n + 4)) {
+  color: lightblue;
+}
+
+.pink-bg {
+  background-color: lightpink;
+}
