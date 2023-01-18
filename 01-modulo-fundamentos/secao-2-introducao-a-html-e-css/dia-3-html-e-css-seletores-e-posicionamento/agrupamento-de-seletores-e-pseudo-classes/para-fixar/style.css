@@ -43,3 +43,7 @@ div + div + div + div + div {
 div + div + div + div + div > h3 {
   color: #fefae0;
 }
+
+div:nth-child(odd) {
+  font-style: italic;
+}
