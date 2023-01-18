@@ -20,7 +20,6 @@ div + div > h3 {
 
 div + div + div {
   background-color: lightgray;
-  height: 40px;
 }
 
 div + div + div > h3 {
@@ -29,7 +28,6 @@ div + div + div > h3 {
 
 div + div + div + div {
   background-color: lightgreen;
-  height: 22px;
 }
 
 div + div + div + div > h3 {
@@ -42,6 +40,10 @@ div + div + div + div + div {
 
 div + div + div + div + div > h3 {
   color: #fefae0;
+}
+
+div:nth-child(5) {
+  height: 4em;
 }
 
 div:nth-child(odd) {
