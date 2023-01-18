@@ -1,3 +1,23 @@
 div:hover {
   border: 5px solid rgb(39, 39, 39);
 }
+
+div {
+  background-color: lightblue;
+}
+
+div + div {
+  background-color: lightcoral;
+}
+
+div + div + div {
+  background-color: lightgray;
+}
+
+div + div + div + div {
+  background-color: lightgreen;
+}
+
+div + div + div + div + div {
+  background-color: lightpink;
+}
