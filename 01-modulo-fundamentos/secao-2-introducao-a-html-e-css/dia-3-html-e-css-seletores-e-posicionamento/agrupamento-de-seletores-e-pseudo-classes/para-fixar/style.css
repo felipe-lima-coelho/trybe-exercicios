@@ -1,0 +1,51 @@
+div:hover {
+  border: 5px solid rgb(39, 39, 39);
+}
+
+div {
+  background-color: lightblue;
+}
+
+div > h3 {
+  color: #2a9d8f;
+}
+
+div + div {
+  background-color: lightcoral;
+}
+
+div + div > h3 {
+  color: #e9c46a;
+}
+
+div + div + div {
+  background-color: lightgray;
+}
+
+div + div + div > h3 {
+  color: #e76f51;
+}
+
+div + div + div + div {
+  background-color: lightgreen;
+}
+
+div + div + div + div > h3 {
+  color: #264653;
+}
+
+div + div + div + div + div {
+  background-color: lightpink;
+}
+
+div + div + div + div + div > h3 {
+  color: #fefae0;
+}
+
+div:nth-child(5) {
+  height: 4em;
+}
+
+div:nth-child(odd) {
+  font-style: italic;
+}
