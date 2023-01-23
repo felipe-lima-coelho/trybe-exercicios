@@ -12,3 +12,13 @@ if (a > b) {
 } else {
   console.log(`O maior número entre ${a} e ${b} é o número ${b}`);
 }
+
+const c = 2;
+
+if (a > b && a > c) {
+  console.log(`O maior número entre ${a}, ${b} e ${c} é o número ${a}`);
+} else if (b > a > c) {
+  console.log(`O maior número entre ${a}, ${b} e ${c} é o número ${b}`);
+} else {
+  console.log(`O maior número entre ${a}, ${b} e ${c} é o número ${c}`);
+}
