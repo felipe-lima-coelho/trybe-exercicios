@@ -22,3 +22,13 @@ if (a > b && a > c) {
 } else {
   console.log(`O maior número entre ${a}, ${b} e ${c} é o número ${c}`);
 }
+
+const valor = -10;
+
+if (valor > 0) {
+  console.log(`O valor recebido é ${valor}, portanto ele é positivo`);
+} else if (valor < 0) {
+  console.log(`O valor recebido é ${valor}, portanto ele é negativo`);
+} else {
+  console.log(`O valor recebido é ${valor}, portanto ele é igual a zero`);
+}
