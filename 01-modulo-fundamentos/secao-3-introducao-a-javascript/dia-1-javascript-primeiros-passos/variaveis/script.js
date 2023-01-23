@@ -9,3 +9,7 @@ console.log(birthYear);
 birthYear = 2030;
 
 console.log(birthYear);
+
+birthCity = "Nao funciona";
+
+console.log(birthCity);
