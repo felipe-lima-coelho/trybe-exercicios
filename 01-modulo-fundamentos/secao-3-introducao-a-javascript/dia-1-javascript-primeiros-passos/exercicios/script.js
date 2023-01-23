@@ -32,3 +32,23 @@ if (valor > 0) {
 } else {
   console.log(`O valor recebido é ${valor}, portanto ele é igual a zero`);
 }
+
+const angulo1 = 70;
+const angulo2 = 90;
+const angulo3 = 20;
+const somaAngulos = angulo1 + angulo2 + angulo3;
+
+if (
+  angulo1 < 0 ||
+  angulo1 === isNaN ||
+  angulo2 < 0 ||
+  angulo2 === isNaN ||
+  angulo3 < 0 ||
+  angulo3 === isNaN
+) {
+  console.log("ERROR");
+} else if (somaAngulos === 180) {
+  console.log(true);
+} else {
+  console.log(false);
+}
