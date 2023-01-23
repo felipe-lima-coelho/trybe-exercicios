@@ -52,3 +52,28 @@ if (
 } else {
   console.log(false);
 }
+
+const pecaXadrez = "Cavalo";
+
+switch (pecaXadrez.toLowerCase()) {
+  case "peao":
+    console.log('1 casa na diagonal "para frente"');
+    break;
+  case "bispo":
+    console.log("todas as casas na diagonais");
+    break;
+  case "cavalo":
+    console.log('se move em forma de "L"');
+    break;
+  case "torre":
+    console.log('se move como um sinal de "+"');
+    break;
+  case "dama":
+    console.log("se move como uma torre e um bispo juntos");
+    break;
+  case "rei":
+    console.log("se move apenas uma casa para qualquer direção");
+    break;
+  default:
+    console.log("Peça informada não existe no Xadrez");
+}
