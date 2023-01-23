@@ -1,2 +1,8 @@
-const a = 3;
-const b = 13;
+const a = 13;
+const b = 3;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
