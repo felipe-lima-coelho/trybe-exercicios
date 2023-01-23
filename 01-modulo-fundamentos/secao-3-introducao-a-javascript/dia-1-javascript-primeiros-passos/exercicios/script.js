@@ -114,3 +114,15 @@ if (nota >= 90 && nota <= 100) {
 } else {
   console.log("ERROR");
 }
+
+// Utilize if/else para escrever um código que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele deve retornar false.
+
+const num1 = 5;
+const num2 = 10;
+const num3 = 15;
+
+if (num1 % 2 === 0 || num2 % 2 === 0 || num3 % 3 === 0) {
+  console.log(true);
+} else {
+  console.log(false);
+}
