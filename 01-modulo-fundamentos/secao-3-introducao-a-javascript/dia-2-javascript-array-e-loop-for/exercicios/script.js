@@ -57,3 +57,15 @@ if (quantosImpar !== 0) {
 } else {
   console.log("nenhum valor ímpar encontrado");
 }
+
+// - Utilizando for, descubra qual o menor valor contido no array e imprima-o
+
+let menoValor = 1000;
+
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] < menoValor) {
+    menoValor = numbers[i];
+  }
+}
+
+console.log(`O menor valor da Array é o ${menoValor}`);
