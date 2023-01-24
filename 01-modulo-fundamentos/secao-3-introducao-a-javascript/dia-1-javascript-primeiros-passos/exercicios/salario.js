@@ -3,7 +3,7 @@ const inputCalcular = document.querySelector("#botao-calcular");
 const sectionResposta = document.querySelector("#resposta");
 
 function calcularSalarioLiquido() {
-  const salarioBruto = inputSalario.ariaValueMax;
+  const salarioBruto = inputSalario.value;
   let inss = 0;
 
   if (salarioBruto > 5189.82) {
