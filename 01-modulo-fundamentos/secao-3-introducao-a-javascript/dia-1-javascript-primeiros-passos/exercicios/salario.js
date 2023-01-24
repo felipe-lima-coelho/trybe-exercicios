@@ -30,4 +30,6 @@ function calcularSalarioLiquido() {
   } else {
     salarioLiquido = salarioReduzidoInss * 0.275 - 869.36;
   }
+
+  sectionResposta.innerHTML = `"<h2>O salário líquido descontado INSS e IR é de ${salarioLiquido}</h2>"`;
 }
