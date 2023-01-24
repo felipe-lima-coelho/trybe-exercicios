@@ -29,3 +29,15 @@ if (mAritimetica > 20) {
 } else {
   console.log("valor menor ou igual a 20");
 }
+
+// - Utilizando for, descubra qual o maior valor contido no array e imprima-o
+
+let compara = 0;
+
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] > compara) {
+    compara = numbers[i];
+  }
+}
+
+console.log(`O maior número da Array é ${compara}`);
