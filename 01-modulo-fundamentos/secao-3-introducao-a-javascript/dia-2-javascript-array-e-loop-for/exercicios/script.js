@@ -15,3 +15,9 @@ for (let i = 0; i < numbers.length; i += 1) {
 }
 
 console.log(`A soma total é igual a ${soma}`);
+
+// - Calcule e imprima a média aritmética dos valores contidos no array;
+
+const mAritimetica = soma / (numbers.length - 1);
+
+console.log(mAritimetica);
