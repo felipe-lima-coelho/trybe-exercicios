@@ -23,3 +23,5 @@ function calcularLucro() {
     sectionResposta.innerHTML = `<h3>O lucro de cada venda é de ${lucro}. Após 1000 vendas o lucro será de ${lucroMil}</h3>`;
   }
 }
+
+botaoCalcular.addEventListener("click", calcularLucro);
