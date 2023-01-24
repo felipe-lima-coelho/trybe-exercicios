@@ -21,3 +21,11 @@ console.log(`A soma total é igual a ${soma}`);
 const mAritimetica = soma / (numbers.length - 1);
 
 console.log(mAritimetica);
+
+// - Com base no código que acabou de gerar, faça com que, caso o valor final seja maior que 20, imprima a mensagem: “valor maior que 20”. Caso não seja, imprima a mensagem: “valor menor ou igual a 20”
+
+if (mAritimetica > 20) {
+  console.log("valor maior que 20");
+} else {
+  console.log("valor menor ou igual a 20");
+}
