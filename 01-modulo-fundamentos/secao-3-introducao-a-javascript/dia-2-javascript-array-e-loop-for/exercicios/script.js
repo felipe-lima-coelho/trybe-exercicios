@@ -41,3 +41,19 @@ for (let i = 0; i < numbers.length; i += 1) {
 }
 
 console.log(`O maior número da Array é ${compara}`);
+
+// - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”
+
+let quantosImpar = 0;
+
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] % 2 !== 0) {
+    quantosImpar += 1;
+  }
+}
+
+if (quantosImpar !== 0) {
+  console.log(`existem ${quantosImpar} valores ímpares no array`);
+} else {
+  console.log("nenhum valor ímpar encontrado");
+}
