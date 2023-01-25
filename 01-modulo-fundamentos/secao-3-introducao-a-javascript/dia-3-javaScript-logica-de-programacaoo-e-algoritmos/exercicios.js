@@ -31,3 +31,18 @@ for (let i = secWord.length - 1; i >= 0; i -= 1) {
 }
 
 console.log(`Nova palavra invertida: ${newWord}`);
+
+// - Utilize a estrutura de repetição for para escrever dois algoritmos: um que imprima no console a maior palavra desse array e outro que imprima a menor. Considere o número de caracteres de cada palavra.
+
+let array = ["java", "javascript", "python", "html", "css"];
+let maiorPalavra = "";
+
+for (let ia = 0; ia < array.length - 1; ia += 1) {
+  for (let ib = 0; ib < array[ia].length - 1; ib += 1) {
+    if (maiorPalavra.length - 1 < array[ia].length - 1) {
+      maiorPalavra = array[ia];
+    }
+  }
+}
+
+console.log(maiorPalavra);
