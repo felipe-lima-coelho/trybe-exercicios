@@ -36,13 +36,19 @@ console.log(`Nova palavra invertida: ${newWord}`);
 
 let array = ["java", "javascript", "python", "html", "css"];
 let maiorPalavra = "";
+let menorPalavra = array[0];
 
-for (let ia = 0; ia < array.length - 1; ia += 1) {
+for (let ia = 0; ia < array.length; ia += 1) {
   for (let ib = 0; ib < array[ia].length - 1; ib += 1) {
     if (maiorPalavra.length - 1 < array[ia].length - 1) {
       maiorPalavra = array[ia];
+      continue;
+    }
+    if (menorPalavra.length - 1 > array[ia].length - 1) {
+      menorPalavra = array[ia];
     }
   }
 }
 
-console.log(maiorPalavra);
+console.log(`Maior palavra: ${maiorPalavra}`);
+console.log(`Menor palavra: ${menorPalavra}`);
