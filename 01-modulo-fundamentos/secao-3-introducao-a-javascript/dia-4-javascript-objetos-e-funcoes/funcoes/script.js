@@ -28,3 +28,13 @@ function divisao(a, b) {
 function modulo(a, b) {
   return a % b;
 }
+
+// - Faça um programa que retorne o maior de dois números. Defina, no começo do programa, duas constantes com os valores que serão comparados.
+
+function maiorValor(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
