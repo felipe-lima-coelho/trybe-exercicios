@@ -38,3 +38,17 @@ function maiorValor(a, b) {
     return b;
   }
 }
+
+// - Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes com os valores que serão comparados.
+
+const c = 7;
+
+function maiorValor3(a, b, c) {
+  if (a > b && a > c) {
+    return a;
+  } else if (b > a && b > c) {
+    return b;
+  } else if (c > a && c > b) {
+    return c;
+  }
+}
