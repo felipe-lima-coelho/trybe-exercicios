@@ -51,3 +51,57 @@ function arrayOfNumbers(array) {
 }
 
 console.log(arrayOfNumbers(vector));
+
+// - A partir do array de frutas basket, retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. Por exemplo, o array [‘Melancia’, ‘Abacate’, ‘Melancia’, ‘Melancia’, ‘Uva’], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.
+// - Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: Sua cesta possui: x Melancias, x Abacates...
+
+const basket = [
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+const arrayFrutas = ['Melancia', 'Abacate', 'Uva', 'Laranja', 'Jaca', 'Pera', 'Banana'];
+
+
+function numFrutas(arrayCesta, frutas) {
+  const objFrutas = {};
+  let sum = 0;
+
+  for (let iFrutas = 0; iFrutas < arrayFrutas.length; iFrutas += 1) {
+    for (let iBasket = 0; iBasket < basket.length; iBasket += 1) {
+      if (arrayFrutas[iFrutas] === basket[iBasket]) {
+        sum += 1;
+      }
+    }
+  
+    objFrutas[arrayFrutas[iFrutas]] = sum;
+    sum = 0;
+  }
+
+  return objFrutas;
+}
+
+let fraseConsole = 'Sua cesta possui:';
+
+for (let i in numFrutas(basket, arrayFrutas)) {
+  fraseConsole += ` ${numFrutas(basket, arrayFrutas)[i]} ${i}s,`
+}
+
+fraseConsole = fraseConsole.slice(0, -1) + '.';
+
+console.log(fraseConsole);
