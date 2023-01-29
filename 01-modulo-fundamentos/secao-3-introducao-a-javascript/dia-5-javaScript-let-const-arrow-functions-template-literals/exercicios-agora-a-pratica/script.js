@@ -92,3 +92,16 @@ let numeroAleatorio = () => {
   return Math.random()
 }
 console.log(numeroAleatorio());
+
+// - Transforme a função hello em uma arrow function;
+// - Copie o código abaixo:
+
+// function hello(nome) {
+//   return `Olá, ${nome}!`
+// }
+// let nome = 'Ivan';
+// console.log(hello(nome));
+
+let hello = nome => `Olá, ${nome}!`;
+let nome = 'Ivan';
+console.log(hello(nome));
