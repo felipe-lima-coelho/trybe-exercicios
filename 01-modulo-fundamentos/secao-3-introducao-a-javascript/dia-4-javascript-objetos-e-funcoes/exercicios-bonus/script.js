@@ -144,3 +144,17 @@ let moradores = {
 const ultimoMorador = moradores.blocoDois[moradores.blocoDois.length - 1];
 
 console.log(`O morador do bloco 2 de nome ${ultimoMorador.nome} ${ultimoMorador.sobrenome} mora no ${ultimoMorador.andar}º andar, apartamento ${ultimoMorador.apartamento}`);
+
+// - Utilize o for para imprimir o nome completo de todos os moradores do bloco 1, acessando suas chaves nome e sobrenome. Depois faça o mesmo para os moradores do bloco 2.
+
+let nomeCompleto = '';
+
+for (let i = 0; i < moradores.blocoUm.length; i += 1) {
+  nomeCompleto = `${moradores.blocoUm[i].nome} ${moradores.blocoUm[i].sobrenome}`
+  console.log(nomeCompleto);
+}
+
+for (let i = 0; i < moradores.blocoDois.length; i += 1) {
+  nomeCompleto = `${moradores.blocoDois[i].nome} ${moradores.blocoDois[i].sobrenome}`
+  console.log(nomeCompleto);
+}
