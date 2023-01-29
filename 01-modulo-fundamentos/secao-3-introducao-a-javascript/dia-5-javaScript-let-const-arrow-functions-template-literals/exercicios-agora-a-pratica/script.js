@@ -105,3 +105,20 @@ console.log(numeroAleatorio());
 let hello = nome => `Olá, ${nome}!`;
 let nome = 'Ivan';
 console.log(hello(nome));
+
+// - Transforme a função nomeCompleto em uma arrow function;
+// - Copie o código abaixo:
+
+// function nomeCompleto(nome, sobrenome) {
+//   return `${nome} ${sobrenome}`
+// }
+// let nome = 'Ivan';
+// let sobrenome = 'Pires';
+// console.log(nomeCompleto(nome, sobrenome));
+
+let nomeCompleto = (nome, sobrenome) => {
+  return `${nome} ${sobrenome}`
+}
+nome = 'Ivan';
+let sobrenome = 'Pires';
+console.log(nomeCompleto(nome, sobrenome));
