@@ -92,6 +92,16 @@
       createLeftContentImg.setAttribute("class", "small-image");
       leftContent.appendChild(createLeftContentImg);
 
+      const rightContent = document.querySelector(".right-content");
+      let createRightContentUl = document.createElement("ul");
+      const arrayContagem = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+
+      for (let i = 0; i < arrayContagem.length; i += 1) {
+        createRightContentUl.innerHTML += `<li>${arrayContagem[i]}</li>`;
+      }
+
+      rightContent.appendChild(createRightContentUl);
+
     </script>
   </body>
 </html>
