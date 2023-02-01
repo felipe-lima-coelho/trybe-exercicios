@@ -60,13 +60,18 @@
       // COLOQUE SEU CÓDIGO AQUI
 
       const body = document.querySelector("body");
-      const h1 = document.createElement("h1");
-      h1.innerHTML = "TrybeTrip - Agência de Viagens";
-      body.appendChild(h1);
+      const createH1 = document.createElement("h1");
+      createH1.innerHTML = "TrybeTrip - Agência de Viagens";
+      body.appendChild(createH1);
 
-      const main = document.createElement("main");
-      main.setAttribute("class", "main-content");
-      body.appendChild(main);
+      const createMain = document.createElement("main");
+      createMain.setAttribute("class", "main-content");
+      body.appendChild(createMain);
+
+      const main = document.querySelector("main");
+      const createSection = document.createElement("section");
+      createSection.setAttribute("class", "center-content");
+      main.appendChild(createSection);
 
     </script>
   </body>
