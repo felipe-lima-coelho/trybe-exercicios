@@ -112,6 +112,12 @@
       const h1 = document.querySelector("h1");
       h1.setAttribute("class", "title");
 
+      const mainH3 = document.querySelectorAll("main h3");
+
+      mainH3.forEach((item) => {
+        item.classList.add("description");
+      });
+
     </script>
   </body>
 </html>
