@@ -126,7 +126,11 @@
 
       const centerContent = document.querySelector(".center-content");
       centerContent.style.backgroundColor = "green";
-      
+
+      const rightContentList = document.querySelectorAll(".right-content li");
+      for (let i = 1; i <= 2; i += 1) {
+        rightContent.firstChild.removeChild(rightContentList[rightContentList.length - i]);
+      }
     </script>
   </body>
 </html>
