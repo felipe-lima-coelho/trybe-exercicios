@@ -39,6 +39,10 @@ input.addEventListener("input", (event) => {
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
 
+myWebpage.addEventListener("dblclick", (event) => {
+  window.location.replace("https://www.linkedin.com/in/felipe-lima-coelho");
+});
+
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
