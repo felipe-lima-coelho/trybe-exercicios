@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+
+      const body = document.querySelector("body");
+      const createH1 = document.createElement("h1");
+      createH1.innerHTML = "TrybeTrip - Agência de Viagens";
+      body.appendChild(createH1);
+
+      const createMain = document.createElement("main");
+      createMain.setAttribute("class", "main-content");
+      body.appendChild(createMain);
+
+      const main = document.querySelector("main");
+      const createSection = document.createElement("section");
+      createSection.setAttribute("class", "center-content");
+      main.appendChild(createSection);
+
+      const mainSection = document.querySelector("main section");
+      const createP = document.createElement("p");
+      createP.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nisi beatae dolorem, eius sit hic repudiandae magnam voluptatibus cupiditate, facilis unde corrupti odio ut nesciunt optio numquam, culpa laboriosam. Cupiditate.";
+      mainSection.appendChild(createP);
+
+      const createMainSectionLeft = document.createElement("section");
+      createMainSectionLeft.setAttribute("class", "left-content");
+      main.appendChild(createMainSectionLeft);
+
+      const createMainSectionRight = document.createElement("section");
+      createMainSectionRight.setAttribute("class", "right-content");
+      main.appendChild(createMainSectionRight);
+
+      const leftContent = document.querySelector(".left-content");
+      const createLeftContentImg = document.createElement("img");
+      createLeftContentImg.setAttribute("src", "https://picsum.photos/200");
+      createLeftContentImg.setAttribute("class", "small-image");
+      leftContent.appendChild(createLeftContentImg);
+
+      const rightContent = document.querySelector(".right-content");
+      let createRightContentUl = document.createElement("ul");
+      const arrayContagem = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+
+      for (let i = 0; i < arrayContagem.length; i += 1) {
+        createRightContentUl.innerHTML += `<li>${arrayContagem[i]}</li>`;
+      }
+
+      rightContent.appendChild(createRightContentUl);
+
+      let createMainH31 = document.createElement("h3");
+      let createMainH32 = document.createElement("h3");
+      let createMainH33 = document.createElement("h3");
+      main.appendChild(createMainH31);
+      main.appendChild(createMainH32);
+      main.appendChild(createMainH33);
+
+      const h1 = document.querySelector("h1");
+      h1.setAttribute("class", "title");
+
+      const mainH3 = document.querySelectorAll("main h3");
+
+      mainH3.forEach((item) => {
+        item.classList.add("description");
+      });
+
+      const mainLeftContent = document.querySelector(".left-content");
+      main.removeChild(mainLeftContent);
+
+      const mainRightContent = document.querySelector(".right-content");
+      mainRightContent.style.marginRight = "auto";
+
+      const centerContent = document.querySelector(".center-content");
+      centerContent.style.backgroundColor = "green";
+
+      const rightContentList = document.querySelectorAll(".right-content li");
+      for (let i = 1; i <= 2; i += 1) {
+        rightContent.firstChild.removeChild(rightContentList[rightContentList.length - i]);
+      }
+    </script>
+  </body>
+</html>
