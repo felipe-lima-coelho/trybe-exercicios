@@ -7,6 +7,7 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // - Copie esse arquivo e edite apenas ele;
 //  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+// // // Isso ocorre por que foi utilizado um transform translateY para alterar a sua posição.
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
