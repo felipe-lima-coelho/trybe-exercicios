@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+section {
+  display: flex;
+  justify-content: center;
+  border: 2px solid lightseagreen;
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+}
