@@ -27,4 +27,21 @@ section div input {
   width: 130px;
   margin: 5px 0px;
   text-align: center;
+  cursor: pointer;
+}
+
+#titulo, #subtitulo, #paragrafo {
+  text-align: center;
+}
+
+#titulo {
+  margin-top: 30px;
+}
+
+#subtitulo {
+  margin-top: 15px;
+}
+
+#paragrafo {
+  margin-top: 30px;
 }
