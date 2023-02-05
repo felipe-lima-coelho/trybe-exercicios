@@ -4,10 +4,27 @@
   box-sizing: border-box;
 }
 
-section {
+section#btsChange {
   display: flex;
   justify-content: center;
   border: 2px solid lightseagreen;
   border-radius: 5px;
   margin: 10px 10px 0px 10px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section div + div {
+  margin-left: 100px;
+}
+
+section div input {
+  display: block;
+  width: 130px;
+  margin: 5px 0px;
+  text-align: center;
 }
