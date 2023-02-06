@@ -86,3 +86,36 @@ btFontSize20.addEventListener("click", () => {
   paragrafoPrincipal.style.fontSize = "20pt";
   localStorage.setItem("fSize", "20pt");
 });
+
+// espaçamento entre as linhas
+
+const btLineHeight1 = document.querySelector("#btLineHeight1");
+const btLineHeightNormal = document.querySelector("#btLineHeightNormal");
+const btLineHeight15 = document.querySelector("#btLineHeight15");
+const btLineHeight20 = document.querySelector("#btLineHeight20");
+const btLineHeight30 = document.querySelector("#btLineHeight30");
+
+btLineHeight1.addEventListener("click", () => {
+  paragrafoPrincipal.style.lineHeight = "1"
+  localStorage.setItem("lineHeight", "1");
+});
+
+btLineHeightNormal.addEventListener("click", () => {
+  paragrafoPrincipal.style.lineHeight = "1.1"
+  localStorage.setItem("lineHeight", "1.1");
+});
+
+btLineHeight15.addEventListener("click", () => {
+  paragrafoPrincipal.style.lineHeight = "1.5"
+  localStorage.setItem("lineHeight", "1.5");
+});
+
+btLineHeight20.addEventListener("click", () => {
+  paragrafoPrincipal.style.lineHeight = "2"
+  localStorage.setItem("lineHeight", "2");
+});
+
+btLineHeight30.addEventListener("click", () => {
+  paragrafoPrincipal.style.lineHeight = "3"
+  localStorage.setItem("lineHeight", "3");
+});
