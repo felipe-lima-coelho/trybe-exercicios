@@ -119,3 +119,18 @@ btLineHeight30.addEventListener("click", () => {
   paragrafoPrincipal.style.lineHeight = "3"
   localStorage.setItem("lineHeight", "3");
 });
+
+// tipo da fonte
+
+const btFontFamilyArial = document.querySelector("#btFontFamilyArial");
+const btFontFamilyTimes = document.querySelector("#btFontFamilyTimes");
+
+btFontFamilyArial.addEventListener("click", () => {
+  secaoPrincipal.style.fontFamily = "Arial, Helvetica, sans-serif";
+  localStorage.setItem("fontFamily", "Arial, Helvetica, sans-serif");
+});
+
+btFontFamilyTimes.addEventListener("click", () => {
+  secaoPrincipal.style.fontFamily = "'Times New Roman', Times, serif";
+  localStorage.setItem("fontFamily", "'Times New Roman', Times, serif");
+});
