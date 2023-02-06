@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section#btsChange {
+  display: flex;
+  justify-content: center;
+  border: 2px solid lightseagreen;
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section div + div {
+  margin-left: 100px;
+}
+
+section div input {
+  display: block;
+  width: 130px;
+  margin: 5px 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 30px;
+  padding: 30px;
+}
+
+#titulo, #subtitulo, #paragrafo {
+  text-align: center;
+}
+
+#subtitulo {
+  margin-top: 15px;
+}
+
+#paragrafo {
+  margin-top: 30px;
+}
