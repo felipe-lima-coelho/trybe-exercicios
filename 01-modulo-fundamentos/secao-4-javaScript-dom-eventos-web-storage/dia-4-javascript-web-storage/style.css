@@ -30,12 +30,13 @@ section div input {
   cursor: pointer;
 }
 
-#titulo, #subtitulo, #paragrafo {
-  text-align: center;
+main {
+  margin-top: 30px;
+  padding: 30px;
 }
 
-#titulo {
-  margin-top: 30px;
+#titulo, #subtitulo, #paragrafo {
+  text-align: center;
 }
 
 #subtitulo {
