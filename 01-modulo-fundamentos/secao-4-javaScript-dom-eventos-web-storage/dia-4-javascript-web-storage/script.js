@@ -31,3 +31,24 @@ btColorBgYellow.addEventListener("click", () => {
   secaoPrincipal.style.backgroundColor = "yellow";
   localStorage.setItem("bgColor", "yellow");
 });
+
+// cor da fonte
+
+const btColorBlack = document.querySelector("#btColorBlack");
+const btColorRed = document.querySelector("#btColorRed");
+const btColorWhite = document.querySelector("#btColorWhite");
+
+btColorBlack.addEventListener("click", () => {
+  secaoPrincipal.style.color = "black";
+  localStorage.setItem("fColor", "black");
+});
+
+btColorRed.addEventListener("click", () => {
+  secaoPrincipal.style.color = "red";
+  localStorage.setItem("fColor", "red");
+});
+
+btColorWhite.addEventListener("click", () => {
+  secaoPrincipal.style.color = "white";
+  localStorage.setItem("fColor", "white");
+});
