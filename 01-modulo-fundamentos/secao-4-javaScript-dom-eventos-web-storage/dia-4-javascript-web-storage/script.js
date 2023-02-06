@@ -134,3 +134,24 @@ btFontFamilyTimes.addEventListener("click", () => {
   secaoPrincipal.style.fontFamily = "'Times New Roman', Times, serif";
   localStorage.setItem("fontFamily", "'Times New Roman', Times, serif");
 });
+
+// inicializar as configurações do local storage
+
+const initialRendering = () => {
+  if (localStorage.getItem("config") === null) {
+    localStorage.setItem("config", "true");
+    localStorage.setItem("bgColor", "white");
+    localStorage.setItem("fColor", "black");
+    localStorage.setItem("fSize", "12pt");
+    localStorage.setItem("lineHeight", "1.1");
+    localStorage.setItem("fontFamily", "'Times New Roman', Times, serif");
+  } else {
+    secaoPrincipal.style.backgroundColor = localStorage.getItem("bgColor");
+    secaoPrincipal.style.color = localStorage.getItem("fColor");
+    paragrafoPrincipal.style.fontSize = localStorage.getItem("fSize");
+    paragrafoPrincipal.style.lineHeight = localStorage.getItem("lineHeight");
+    secaoPrincipal.style.fontFamily = localStorage.getItem("fontFamily");
+  }
+};
+
+window.onload = () => initialRendering();
