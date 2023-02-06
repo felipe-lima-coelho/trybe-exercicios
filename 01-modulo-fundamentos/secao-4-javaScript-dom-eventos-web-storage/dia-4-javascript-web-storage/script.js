@@ -52,3 +52,37 @@ btColorWhite.addEventListener("click", () => {
   secaoPrincipal.style.color = "white";
   localStorage.setItem("fColor", "white");
 });
+
+// tamanho da fonte
+
+const btFontSize8 = document.querySelector("#btFontSize8");
+const btFontSize10 = document.querySelector("#btFontSize10");
+const btFontSize12 = document.querySelector("#btFontSize12");
+const btFontSize14 = document.querySelector("#btFontSize14");
+const btFontSize20 = document.querySelector("#btFontSize20");
+const paragrafoPrincipal = document.querySelector("#paragrafo");
+
+btFontSize8.addEventListener("click", () => {
+  paragrafoPrincipal.style.fontSize = "8pt";
+  localStorage.setItem("fSize", "8pt");
+});
+
+btFontSize10.addEventListener("click", () => {
+  paragrafoPrincipal.style.fontSize = "10pt";
+  localStorage.setItem("fSize", "10pt");
+});
+
+btFontSize12.addEventListener("click", () => {
+  paragrafoPrincipal.style.fontSize = "12pt";
+  localStorage.setItem("fSize", "12pt");
+});
+
+btFontSize14.addEventListener("click", () => {
+  paragrafoPrincipal.style.fontSize = "14pt";
+  localStorage.setItem("fSize", "14pt");
+});
+
+btFontSize20.addEventListener("click", () => {
+  paragrafoPrincipal.style.fontSize = "20pt";
+  localStorage.setItem("fSize", "20pt");
+});
