@@ -51,6 +51,7 @@ body {
 .movie-container {
   display: flex;
   flex-direction: column;
+  flex-basis: 700px;
 }
 
 .movie-container h2 {
@@ -62,6 +63,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.card-container div {
+  flex-basis: 16%;
 }
 
 .card-container div {
