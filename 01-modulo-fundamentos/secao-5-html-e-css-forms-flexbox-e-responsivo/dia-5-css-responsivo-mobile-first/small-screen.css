@@ -30,6 +30,10 @@
   }
  }
 
+ @media screen and (min-width: 992px) {
+  
+ }
+
  html {
   box-sizing: border-box;
 }
