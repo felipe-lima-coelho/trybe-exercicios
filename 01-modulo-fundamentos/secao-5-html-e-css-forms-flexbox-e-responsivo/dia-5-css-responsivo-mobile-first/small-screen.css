@@ -11,9 +11,22 @@
     font-size: 1.2em;
   }
 
-  header, article, main {
+  header, article, main h2 {
     margin: 20px auto;
     width: 90%;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figure {
+    width: 40%;
+    text-align: center;
   }
  }
 
