@@ -10,6 +10,11 @@
     background-color: rgb(244, 244, 244);
     font-size: 1.2em;
   }
+
+  header, article, main {
+    margin: 20px auto;
+    width: 90%;
+  }
  }
 
  html {
