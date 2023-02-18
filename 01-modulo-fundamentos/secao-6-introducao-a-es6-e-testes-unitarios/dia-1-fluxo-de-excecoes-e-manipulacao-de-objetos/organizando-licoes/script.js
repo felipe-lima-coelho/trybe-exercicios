@@ -95,3 +95,13 @@ const totalStudents = (obj) => {
 };
 
 console.log(totalStudents(allLessons));
+
+// Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+  // console.log(getValueByNumber(lesson1, 0));
+  // Output: 'Matemática'
+
+const getValueByNumber = (obj, position) => {
+  return Object.values(obj)[position]
+};
+
+console.log(getValueByNumber(lesson1, 0));
