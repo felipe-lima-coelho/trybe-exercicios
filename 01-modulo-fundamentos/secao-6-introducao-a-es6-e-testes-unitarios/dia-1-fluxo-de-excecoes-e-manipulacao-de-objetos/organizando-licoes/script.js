@@ -27,3 +27,11 @@ const addEntriesObj = (obj, key, value) => {
 addEntriesObj(lesson2, 'turno', 'noite');
 
 console.log(lesson2);
+
+// Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
+
+const viewKeysObj = (obj) => {
+  return Object.keys(obj);
+};
+
+console.log(viewKeysObj(lesson1));
