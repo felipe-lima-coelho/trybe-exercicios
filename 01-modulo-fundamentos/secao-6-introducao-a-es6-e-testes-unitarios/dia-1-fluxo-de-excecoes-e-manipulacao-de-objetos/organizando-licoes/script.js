@@ -128,3 +128,20 @@ const verifyPair = (obj, key, value) => {
 
 console.log(verifyPair(lesson3, 'turno', 'noite'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+// Utilizando o objeto (allLesson), crie uma função para contar quantos estudantes assistiram às aulas de Matemática;
+
+const numStudentsMatery = (obj, matery) => {
+  const arrayValues = Object.values(obj);
+  let sum = 0;
+
+  arrayValues.forEach((element) => {
+    if (element.materia === matery) {
+      sum += element.numeroEstudantes;
+    }
+  });
+
+  return sum
+};
+
+console.log(numStudentsMatery(allLessons, 'Matemática'));
