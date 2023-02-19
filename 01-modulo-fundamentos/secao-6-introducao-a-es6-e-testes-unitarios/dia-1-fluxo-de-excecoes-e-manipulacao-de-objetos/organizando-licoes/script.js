@@ -145,3 +145,33 @@ const numStudentsMatery = (obj, matery) => {
 };
 
 console.log(numStudentsMatery(allLessons, 'Matemática'));
+
+// Utilizando o objeto (allLesson), crie uma função que deva retornar um objeto que represente o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes.
+  // console.log(createReport(allLessons, 'Maria Clara'));
+  // {
+  //   professor: 'Maria Clara',
+  //   aulas: [ 'Matemática', 'Matemática' ],
+  //   estudantes: 30
+  // }
+
+const createReport = (obj, nameTeacher) => {
+  const arrayValues = Object.values(obj);
+  const teacher = nameTeacher;
+  const objResult = {
+    professor: '',
+    aulas: [],
+    estudantes: 0
+  };
+
+  arrayValues.forEach((element) => {
+    if (element.professor === teacher) {
+      objResult.professor = teacher;
+      objResult.aulas.push(element.materia);
+      objResult.estudantes += element.numeroEstudantes;
+    }
+  });
+
+  return objResult;
+};
+
+console.log(createReport(allLessons, 'Maria Clara'));
