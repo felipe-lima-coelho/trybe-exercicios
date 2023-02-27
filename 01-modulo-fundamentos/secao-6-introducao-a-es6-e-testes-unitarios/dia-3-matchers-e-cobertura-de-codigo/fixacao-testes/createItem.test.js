@@ -17,7 +17,9 @@ describe('a função createItem', () => {
       price: 1.99,
     });
   });
-  it.todo('Lança um erro quando não recebe parâmetros');
+  it('Lança um erro quando não recebe parâmetros', () => {
+    expect(() => createItem()).toThrow(Error);
+  });
   it.todo('Lança um erro se o nome do item não é uma string');
   it.todo('Lança um erro se o preço é negativo');
   it.todo('Lança um erro se o preço é zero');
