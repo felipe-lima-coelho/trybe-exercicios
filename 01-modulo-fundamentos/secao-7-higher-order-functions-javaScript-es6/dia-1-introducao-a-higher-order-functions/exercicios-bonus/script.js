@@ -23,9 +23,6 @@ const dragon = {
 const battleMembers = { mage, warrior, dragon };
 
 // Crie uma função que retorne o dano do dragão
-
-const dragonDamage = () => dragon.damage;
-
 // O dano será um número aleatório entre 15 (dano mínimo) e o valor do atributo strength (dano máximo).
 
 const randonNumber = (min, max) => {
@@ -34,6 +31,4 @@ const randonNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-dragon.damage = randonNumber(15, dragon.strength);
-
-console.log(dragonDamage());
+const dragonDamage = () => randonNumber(15, dragon.strength);
