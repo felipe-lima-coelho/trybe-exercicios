@@ -37,3 +37,32 @@ const dragonDamage = () => randonNumber(15, dragon.strength);
 // O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
 
 const warriorDamage = () => randonNumber(warrior.strength, (warrior.strength * warrior.weaponDmg));
+
+// Crie uma função que retorne um objeto com duas chaves e dois valores contendo o dano e a mana gasta pelo mago em um turno.
+// O dano será um número aleatório entre o valor do atributo intelligence (dano mínimo) e o valor de intelligence * 2 (dano máximo).
+// A mana consumida por turno é 15. Além disso, a função deve ter uma condicional: caso o mago tenha menos de 15 de mana, o valor de dano recebe uma mensagem (Ex: “Não possui mana suficiente”), e a mana gasta é 0.
+
+const consumeMana = () => {
+  mage.mana -= 15;
+};
+
+const responseMageDamage = () => {
+  if (mage.mana < 15) {
+    return 'Não possui mana suficiente';
+  }
+  
+  consumeMana();
+  return randonNumber(mage.intelligence, (mage.intelligence * 2));
+};
+
+const mageMana = () => {
+  if (mage.mana < 15) {
+    return 0;
+  }
+  return 15;
+};
+
+const mageDamage = () => ({
+  dano: responseMageDamage(),
+  mana : mageMana(),
+});
