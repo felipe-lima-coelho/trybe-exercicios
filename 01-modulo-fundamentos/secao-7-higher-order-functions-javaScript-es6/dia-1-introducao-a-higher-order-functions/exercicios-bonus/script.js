@@ -32,3 +32,8 @@ const randonNumber = (min, max) => {
 };
 
 const dragonDamage = () => randonNumber(15, dragon.strength);
+
+// Crie uma função que retorne o dano causado pelo warrior.
+// O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
+
+const warriorDamage = () => randonNumber(warrior.strength, (warrior.strength * warrior.weaponDmg));
