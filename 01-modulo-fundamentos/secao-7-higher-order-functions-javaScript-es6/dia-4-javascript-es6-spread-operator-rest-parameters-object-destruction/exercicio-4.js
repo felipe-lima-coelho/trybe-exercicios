@@ -32,7 +32,7 @@ const people = [
 // escreva filterPeople abaixo
 
 const filterPeople = () => people
-  .filter(({ bornIn,  nationality}) => (bornIn > 1900 && bornIn < 2001)
+  .filter(({ bornIn,  nationality }) => (bornIn > 1900 && bornIn < 2001)
     && nationality === 'Australian');
 
 console.log(filterPeople());
