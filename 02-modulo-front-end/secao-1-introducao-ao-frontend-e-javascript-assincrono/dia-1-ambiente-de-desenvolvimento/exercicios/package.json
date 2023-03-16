@@ -1,0 +1,14 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "Exercício ára criar um validador de campos",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open"
+  },
+  "author": "Felipe Lima Coelho",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.2.0"
+  }
+}
