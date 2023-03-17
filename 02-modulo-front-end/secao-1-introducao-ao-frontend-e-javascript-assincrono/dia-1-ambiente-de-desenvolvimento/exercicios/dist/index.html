@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Validador de Campos</title>
+  <script type="module" crossorigin src="/assets/index-e1b1a5ef.js"></script>
+  <link rel="stylesheet" href="/assets/index-4917127a.css">
+</head>
+<body>
+  <main>
+    <form>
+      <section>
+        <label for="text-input">Digite Aqui:</label>
+        <input type="text" name="text-input" id="text-input">
+      </section>
+  
+      <section>
+        <label for="select-validator">Tipo de Validação:</label>
+        <select name="select-validator" id="select-validator">
+          <option value="email">É um Email</option>
+          <option value="let">Somente Letras</option>
+          <option value="boo">É Booleano</option>
+          <option value="date">É uma Data (YYYY/MM/DD)</option>
+          <option value="empty">Está Vazio</option>
+        </select>
+      </section>
+      
+      <button id="check-form">Validar</button>
+    </form>
+    <h2 id="response">Digite o valor, escolha a opção e clique em validar</h2>
+  </main>
+</body>
+</html>

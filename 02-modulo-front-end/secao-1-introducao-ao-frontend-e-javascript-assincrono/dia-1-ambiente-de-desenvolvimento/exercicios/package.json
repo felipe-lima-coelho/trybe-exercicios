@@ -4,7 +4,8 @@
   "description": "Exercício ára criar um validador de campos",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --open"
+    "dev": "vite --open",
+    "build": "vite build"
   },
   "author": "Felipe Lima Coelho",
   "license": "ISC",
