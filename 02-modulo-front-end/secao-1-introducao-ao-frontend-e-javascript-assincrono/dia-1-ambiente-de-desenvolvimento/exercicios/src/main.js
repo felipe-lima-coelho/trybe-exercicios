@@ -6,25 +6,23 @@ const btnCheck = document.querySelector('#check-form');
 const response = document.querySelector('#response');
 
 btnCheck.addEventListener('click', (event) => {
-  event.preventDefault()
+  event.preventDefault();
   const text = textInput.value;
   const optionSelected = selectValidator.value;
 
-  switch (optionSelected) {
-    case 'email':
-      response.innerHTML = `A validação retornou ${validator.isEmail(text)}`;
-      break;
-    case 'let':
-      response.innerHTML = `A validação retornou ${validator.isAlpha(text)}`;
-      break;
-    case 'boo':
-      response.innerHTML = `A validação retornou ${validator.isBoolean(text)}`;
-      break;
-    case 'date':
-      response.innerHTML = `A validação retornou ${validator.isDate(text)}`;
-      break;
-    default:
-      response.innerHTML = `A validação retornou ${validator.isEmpty(text)}`;
-      break;
+  if (optionSelected === 'email') {
+    response.innerHTML = `A validação retornou ${validator.isEmail(text)}`;
+  }
+  if (optionSelected === 'let') {
+    response.innerHTML = `A validação retornou ${validator.isAlpha(text)}`;
+  }
+  if (optionSelected === 'boo') {
+    response.innerHTML = `A validação retornou ${validator.isBoolean(text)}`;
+  }
+  if (optionSelected === 'date') {
+    response.innerHTML = `A validação retornou ${validator.isDate(text)}`;
+  }
+  if (optionSelected === 'empty') {
+    response.innerHTML = `A validação retornou ${validator.isEmpty(text)}`;
   }
 });
