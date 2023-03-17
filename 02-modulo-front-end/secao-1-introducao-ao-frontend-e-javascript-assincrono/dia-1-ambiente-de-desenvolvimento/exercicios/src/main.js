@@ -1,4 +1,5 @@
 import validator from 'validator';
+import './style.css';
 
 const textInput = document.querySelector('#text-input');
 const selectValidator = document.querySelector('#select-validator');
