@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #ececec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  background-color: rgb(250, 250, 231);
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.response {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.res-image-container {
+  width: 240px;
+  height: 320px;
+  margin-bottom: 20px;
+}
+
+.res-image-container.active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.super-hero-image {
+  width: 100%;
+  max-height: 320px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+.btn-sort {
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: blueviolet;
+  color: white;
+  transition: ease-in 0.15s;
+}
+
+.btn-sort:hover {
+  background-color: rgb(224, 198, 248);
+  color: blueviolet;
+}
