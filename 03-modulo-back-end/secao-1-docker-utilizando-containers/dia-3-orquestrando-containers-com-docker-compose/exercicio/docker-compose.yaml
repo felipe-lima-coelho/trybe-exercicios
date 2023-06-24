@@ -11,6 +11,8 @@ services:
       - database__connection__user=root
       - database__connection__password=password
       - database__connection__database=ghost
+    networks:
+      - my-network
     depends_on:
       - "db"
   
@@ -18,3 +20,11 @@ services:
     image: mysql:5.7.40
     environment:
       - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      # - /home/felipe/trybe/pre-repo/docker-dia-3-exercicio:/var/lib/mysql
+      - ./db-data:/var/lib/mysql
+    networks:
+      - my-network
+
+networks:
+  my-network:
