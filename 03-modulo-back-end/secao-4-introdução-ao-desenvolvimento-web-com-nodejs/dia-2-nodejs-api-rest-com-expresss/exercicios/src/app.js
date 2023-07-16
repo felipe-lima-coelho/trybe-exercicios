@@ -8,6 +8,22 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/movies/search', async (req, res) => {
+  try {
+    const { q } = req.query;
+    const movies = await readFileJson();
+
+    if (q) {
+      const filteredMovies = movies.filter((element) => element.movie.includes(q));
+      return res.status(200).json(filteredMovies);
+    }
+
+    res.status(200).end;
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
 app.get('/movies', async (req, res) => {
   const readFile = await readFileJson();
 
