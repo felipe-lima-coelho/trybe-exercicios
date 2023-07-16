@@ -1,6 +1,7 @@
 const express = require('express');
 const readFileJson = require('./utils/readFileJson');
 const writeFileJson = require('./utils/writeFileJson');
+const updateFileJson = require('./utils/updateFileJson');
 
 const app = express();
 
@@ -32,6 +33,25 @@ app.post('/movies', async (req, res) => {
   const movies = await readFileJson();
 
   res.status(201).json({ movies });
+});
+
+app.put('/movies/:id', async (req, res) => {
+  const { id } = req.params;
+  const { movie, price } = req.body;
+  const file = await readFileJson();
+
+  const findIndex = file.findIndex((movie) => movie.id === Number(id));
+
+  if (!findIndex) {
+    return res.status(404).json({ message: 'Movie not found' });
+  }
+
+  updateFileJson(findIndex, movie, price);
+
+  const idMovie = file[findIndex].id;
+  const updatedMovie = { idMovie, movie, price };
+
+  res.status(200).json({ ...updatedMovie });
 });
 
 module.exports = app;
