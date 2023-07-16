@@ -1,5 +1,6 @@
 const express = require('express');
 const readFileJson = require('./utils/readFileJson');
+const writeFileJson = require('./utils/writeFileJson');
 
 const app = express();
 
@@ -22,6 +23,15 @@ app.get('/movies/:id', async (req, res) => {
   }
 
   res.status(200).json(findMovie);
+});
+
+app.post('/movies', async (req, res) => {
+  const newMovie = req.body;
+  await writeFileJson(newMovie);
+
+  const movies = await readFileJson();
+
+  res.status(201).json({ movies });
 });
 
 module.exports = app;
