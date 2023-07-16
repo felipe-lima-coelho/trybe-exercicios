@@ -2,6 +2,7 @@ const express = require('express');
 const readFileJson = require('./utils/readFileJson');
 const writeFileJson = require('./utils/writeFileJson');
 const updateFileJson = require('./utils/updateFileJson');
+const deleteFileJson = require('./utils/deleteFileJson');
 
 const app = express();
 
@@ -52,6 +53,19 @@ app.put('/movies/:id', async (req, res) => {
   const updatedMovie = { idMovie, movie, price };
 
   res.status(200).json({ ...updatedMovie });
+});
+
+app.delete('/movies/:id', async (req, res) => {
+  const { id } = req.params;
+  const file = await readFileJson();
+  const findMovie = file.find((movie) => movie.id === Number(id));
+
+  if (!findMovie) {
+    return res.status(404).json({ message: 'Movie not found' });
+  };
+
+  deleteFileJson(id);
+  res.status(200).end();
 });
 
 module.exports = app;
