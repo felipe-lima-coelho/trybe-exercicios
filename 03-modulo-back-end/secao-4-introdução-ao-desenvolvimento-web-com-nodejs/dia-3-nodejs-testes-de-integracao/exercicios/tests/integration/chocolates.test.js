@@ -91,7 +91,7 @@ describe('Testando a API Trybe Chocolates', function () {
       },
     };
 
-    const response = await chai.request(app).get('/chocolates/1').send(mockSendBody);
+    const response = await chai.request(app).put('/chocolates/1').send(mockSendBody);
 
     expect(response.status).to.be.equal(200);
     expect(response.body).to.deep.equal(output);
@@ -100,7 +100,7 @@ describe('Testando a API Trybe Chocolates', function () {
   it('Usando o método POST "/chocolates/555"', async function () {
     const output = { message: 'chocolate not found' };
 
-    const response = await chai.request(app).get('/chocolates/555').send(mockSendBody);
+    const response = await chai.request(app).put('/chocolates/555').send(mockSendBody);
 
     expect(response.status).to.be.equal(404);
     expect(response.body).to.deep.equal(output);
