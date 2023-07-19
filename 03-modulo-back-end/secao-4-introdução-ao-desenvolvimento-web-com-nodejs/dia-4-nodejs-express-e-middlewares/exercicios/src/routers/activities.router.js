@@ -1,10 +1,10 @@
 const express = require('express');
-const existingBody = require('../middlewares/existingBody');
+const existingName = require('../middlewares/existingName');
 const { addToFile } = require('../helpers/files');
 
 const router = express.Router();
 
-router.post('/activities', existingBody, async (req, res) => {
+router.post('/activities', existingName, async (req, res) => {
   await addToFile(req.body);
   res.status(201).json({ message: 'Atividade cadastrada com sucesso!' });
 });
