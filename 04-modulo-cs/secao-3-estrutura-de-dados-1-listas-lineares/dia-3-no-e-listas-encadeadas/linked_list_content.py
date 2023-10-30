@@ -95,6 +95,19 @@ class LinkedList:
 
         return current_node
 
+    def index_of(self, value: int) -> int:
+        current_node = self.head_value
+        position = 0
+
+        while current_node:
+            if current_node.value == value:
+                return position
+
+            current_node = current_node.next
+            position += 1
+
+        return -1
+
     def __len__(self) -> int:
         return self.__length
 
