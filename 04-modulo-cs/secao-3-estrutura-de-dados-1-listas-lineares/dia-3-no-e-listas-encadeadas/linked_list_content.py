@@ -1,4 +1,5 @@
 from node import Node
+from types import UnionType
 
 
 class LinkedList:
@@ -13,15 +14,11 @@ class LinkedList:
         self.__length += 1
 
     def insert_last(self, value: int) -> None:
-        last_value = Node(value)
-        current_value = self.head_value
-
-        if current_value is None:
+        if self.is_empty():
             return self.insert_first(value)
 
-        while current_value.next:
-            current_value = current_value.next
-
+        last_value = Node(value)
+        current_value = self.get_element_at(self.__length - 1)
         current_value.next = last_value
         self.__length += 1
 
@@ -31,12 +28,7 @@ class LinkedList:
         if position > self.__length:
             return self.insert_last(value)
 
-        current_value = self.head_value
-
-        while position > 1:
-            current_value = current_value.next
-            position -= 1
-
+        current_value = self.__get_node_at(position - 1)
         next_value = Node(value)
         next_value.next = current_value.next
         current_value.next = next_value
@@ -56,11 +48,7 @@ class LinkedList:
         if self.__length <= 1:
             return self.remove_first()
 
-        previous_to_be_removed = self.head_value
-
-        while previous_to_be_removed.next.next:
-            previous_to_be_removed = previous_to_be_removed.next
-
+        previous_to_be_removed = self.__get_node_at(self.__length - 2)
         value_to_be_removed = previous_to_be_removed.next
         previous_to_be_removed.next = None
         self.__length -= 1
@@ -73,12 +61,7 @@ class LinkedList:
         if position > self.__length:
             return self.remove_last()
 
-        previous_to_be_removed = self.head_value
-
-        while position > 1:
-            previous_to_be_removed = previous_to_be_removed.next
-            position -= 1
-
+        previous_to_be_removed = self.__get_node_at(position - 1)
         value_to_be_removed = previous_to_be_removed.next
         previous_to_be_removed.next = value_to_be_removed.next
         value_to_be_removed.next = None
@@ -88,15 +71,10 @@ class LinkedList:
 
     def get_element_at(self, position: int) -> Node:
         value_returned = None
-        value_to_be_returned = self.head_value
+        value_to_be_returned = self.__get_node_at(position)
 
-        if value_returned:
-            while position > 0 and value_to_be_returned.next:
-                value_to_be_returned = value_to_be_returned.next
-                position -= 1
-
-            if value_to_be_returned:
-                value_returned = Node(value_to_be_returned.value)
+        if value_to_be_returned:
+            value_returned = Node(value_to_be_returned.value)
 
         return value_returned
 
@@ -106,6 +84,16 @@ class LinkedList:
     def clear(self) -> None:
         self.head_value = None
         self.__length = 0
+
+    def __get_node_at(self, position: int) -> UnionType[Node, None]:
+        current_node = self.head_value
+
+        if current_node:
+            while position > 0 and current_node.next:
+                current_node = current_node.next
+                position -= 1
+
+        return current_node
 
     def __len__(self) -> int:
         return self.__length
