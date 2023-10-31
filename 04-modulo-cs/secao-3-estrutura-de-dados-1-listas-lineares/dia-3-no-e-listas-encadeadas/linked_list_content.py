@@ -1,5 +1,6 @@
 from node import Node
-from types import UnionType
+
+# from types import UnionType
 
 
 class LinkedList:
@@ -85,7 +86,7 @@ class LinkedList:
         self.head_value = None
         self.__length = 0
 
-    def __get_node_at(self, position: int) -> UnionType[Node, None]:
+    def __get_node_at(self, position: int):
         current_node = self.head_value
 
         if current_node:
