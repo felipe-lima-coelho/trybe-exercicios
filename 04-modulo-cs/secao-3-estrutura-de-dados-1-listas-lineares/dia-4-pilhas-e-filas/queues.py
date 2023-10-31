@@ -1,5 +1,5 @@
-from lists.linked_list import LinkedList
-from lists.node import Node
+from linked_list import LinkedList
+from node import Node
 
 
 class Queue:
